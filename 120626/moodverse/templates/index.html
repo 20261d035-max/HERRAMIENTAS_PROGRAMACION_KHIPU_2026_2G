@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MoodVerse - Sintoniza tu Universo</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body class="mood-electrico"> <canvas id="particleCanvas"></canvas>
+
+    <div class="container">
+        <header>
+            <h1>Mood<span class="logo-highlight">Verse</span></h1>
+            <p class="subtitle">Sintoniza el diseño de tu entorno con tu estado de ánimo</p>
+        </header>
+
+        <nav class="mood-selector">
+            <button class="mood-btn active" data-mood="electrico">⚡ Eléctrico</button>
+            <button class="mood-btn" data-mood="zen">🍃 Zen</button>
+            <button class="mood-btn" data-mood="melancolico">🌌 Melancólico</button>
+            <button class="mood-btn" data-mood="creativo">💥 Creativo</button>
+        </nav>
+
+        <main class="glass-card">
+            <div class="card-content">
+                <p id="mood-phrase" class="phrase">⚡ El futuro pertenece a quienes creen en la belleza de sus sueños más intensos. ¡Rompe los límites hoy!</p>
+                <span id="mood-author" class="author">— Energía Pura</span>
+            </div>
+        </main>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
